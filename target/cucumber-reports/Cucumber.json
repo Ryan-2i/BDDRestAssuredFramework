@@ -1,0 +1,206 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-12-11T17:27:52.151Z",
+        "line": 5,
+        "name": "GET employee data",
+        "description": "",
+        "id": "automated-api-test-using-restassured;get-employee-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2489000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "GET request on url: \"GetEmployees\" with searchParam \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetEmployees\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"1\"",
+                  "offset": 52
+                }
+              ],
+              "location": "stepDefinitions.Steps.getEmployeeById(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Check the response status is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "stepDefinitions.Steps.checkResponseStatus(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Check the status line is correct for HTTP request",
+            "match": {
+              "location": "stepDefinitions.Steps.checkResponseStatusLine()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Check headers",
+            "match": {
+              "location": "stepDefinitions.Steps.checkHeaders()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 29000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The response Json matches the Json from file \"responseData/EmployeeResponseData.Json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"responseData/EmployeeResponseData.Json\"",
+                  "offset": 45
+                }
+              ],
+              "location": "stepDefinitions.Steps.checkResponseJsonIsCorrect(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@apiTest"
+          },
+          {
+            "name": "@all"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-11T17:27:54.787Z",
+        "line": 14,
+        "name": "POST employee data",
+        "description": "",
+        "id": "automated-api-test-using-restassured;post-employee-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 939000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "POST data to url: \"PostEmployee\" from the json file: \"requestData/EmployeeData.Json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PostEmployee\"",
+                  "offset": 18
+                },
+                {
+                  "val": "\"requestData/EmployeeData.Json\"",
+                  "offset": 53
+                }
+              ],
+              "location": "stepDefinitions.Steps.postEmployeeById(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Check the response status is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "stepDefinitions.Steps.checkResponseStatus(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 429000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The key \"id\" is returned in the response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"id\"",
+                  "offset": 8
+                }
+              ],
+              "location": "stepDefinitions.Steps.checkResponseKeyPresent(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@apiTest"
+          },
+          {
+            "name": "@all"
+          }
+        ]
+      }
+    ],
+    "name": "Automated API Test using restassured",
+    "description": "Description: Testing apis using restassured and testNG.",
+    "id": "automated-api-test-using-restassured",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/resources/features/ApiTesting.feature",
+    "tags": [
+      {
+        "name": "@apiTest",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@all",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 10
+        }
+      }
+    ]
+  }
+]

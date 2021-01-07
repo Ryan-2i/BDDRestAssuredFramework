@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="4.284">
+<testcase classname="Automated API Test using restassured" name="GET employee data" time="2.629">
+<system-out><![CDATA[Given GET request on url: "GetEmployees" with searchParam "1"...............passed
+Then Check the response status is 200.......................................passed
+And Check the status line is correct for HTTP request.......................passed
+And Check headers...........................................................passed
+And The response Json matches the Json from file "responseData/EmployeeResponseData.Json".passed
+]]></system-out>
+</testcase>
+<testcase classname="Automated API Test using restassured" name="POST employee data" time="1.37">
+<system-out><![CDATA[Given POST data to url: "PostEmployee" from the json file: "requestData/EmployeeData.Json".passed
+Then Check the response status is 200.......................................passed
+And The key "id" is returned in the response................................passed
+]]></system-out>
+</testcase>
+</testsuite>
